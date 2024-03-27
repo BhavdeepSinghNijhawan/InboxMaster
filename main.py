@@ -1,3 +1,5 @@
+#Author: Bhavdeep Singh Nijhawan
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -30,4 +32,4 @@ for email in emailList:
   print(f"Mail sent to - {email}")
   time.sleep(2)
 
-print("All emails are Sent Successfully")
+print("All E-Mails are Sent Successfully")
