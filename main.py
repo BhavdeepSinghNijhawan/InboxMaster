@@ -12,7 +12,7 @@ emailList = ['########', '########', '########']
 
 def sendMail(fromEmail, toEmail, subject, message):
   msg = MIMEMultipart()
-  msg.set_unixfrom("harry")
+  msg.set_unixfrom("BhavdeepSinghNijhawan")
   msg['From'] = fromEmail
   msg['To'] = toEmail
   msg['Subject'] = subject
