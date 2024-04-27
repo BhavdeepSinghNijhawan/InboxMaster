@@ -1,4 +1,4 @@
-<h1 align="center">EMAIL MARKETING BOT</h1>
+<h1 align="center">InboxMaster</h1>
 
 ![image](https://github.com/BhavdeepSinghNijhawan/Email-Marketing-Bot/assets/143419096/8109b397-e5ed-4d81-9a08-89208fa3be61)
 
