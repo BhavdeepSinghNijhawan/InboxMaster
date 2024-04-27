@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 import os
 import time
 
-print("Welcome to Email Marketing")
+print("Welcome to InboxMaster")
 # This can be Read from a .csv file
 emailList = ['########', '########', '########']
 
@@ -26,8 +26,8 @@ def sendMail(fromEmail, toEmail, subject, message):
   
 for email in emailList: 
   fromEmail = "########"
-  subject = "Welcome to Email Marketing"
-  message = "This is a Test for Email Marketing Bot"
+  subject = "Welcome to InboxMaster"
+  message = "This is a Test for InboxMaster"
   sendMail(fromEmail, email, subject, message)
   print(f"Mail sent to - {email}")
   time.sleep(2)
