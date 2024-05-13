@@ -48,12 +48,57 @@ import os
 import time
 ```
 - **Print Welcome Message:** It prints a welcome message indicating the start of the email marketing process.
+```
+print("Welcome to InboxMaster")
+```
 - **Email List:** The list emailList contains the email addresses to which the marketing emails will be sent. In a real-world scenario, this list might be populated from a **CSV file or a database**.
+```
+emailList = ['########', '########', '########']
+```
 - **Defining the sendMail Function:** This function takes parameters for the sender's email address, recipient's email address, email subject, and email message. It then constructs an email message using MIMEMultipart and MIMEText objects. Finally, it sends the email via an **SMTP server using SSL encryption**.
+```
+def sendMail(fromEmail, toEmail, subject, message):
+```
+- This line defines a function named sendMail that takes four parameters: fromEmail (sender's email address), toEmail (recipient's email address), subject (email subject), and message (email body).
+```
+  msg = MIMEMultipart()
+  msg.set_unixfrom("BhavdeepSinghNijhawan")
+  msg['From'] = fromEmail
+  msg['To'] = toEmail
+  msg['Subject'] = subject
+  msg.attach(MIMEText(message))
+```
+- These lines create a new MIMEMultipart message object and set its attributes such as sender, recipient, subject, and message body.
+```
+  mailserver = smtplib.SMTP_SSL('smtpout.secureserver.net', 465)
+  mailserver.ehlo()
+  mailserver.login(os.environ['email'], os.environ['password'])
+```
+- These lines create an SMTP server object using SSL encryption and connect to the SMTP server. The login method is then used to authenticate the user using the email and password obtained from environment variables.
+```
+  mailserver.sendmail(fromEmail, toEmail, msg.as_string())
+  mailserver.quit()
+```
 - **Iterating Over Email List:** The script iterates over each email address in the emailList. For each email address, it sets the sender's email address, subject, and message, and then calls the sendMail function to send the email.
+```
+for email in emailList: 
+  fromEmail = "########"
+  subject = "Welcome to InboxMaster"
+  message = "This is a Test for InboxMaster"
+  sendMail(fromEmail, email, subject, message)
+```
 - **Sending Emails:** Inside the loop, emails are sent to each recipient sequentially. After sending each email, it prints a message indicating the email has been sent.
+```
+print(f"Mail sent to - {email}")
+```
 - **Delay Between Emails:** To avoid overloading the email server, the script pauses for **2 seconds** between sending each email.
+```
+time.sleep(2)
+```
 - **Completion Message:** It prints a message indicating that all emails have been sent successfully.
+```
+print("All E-Mails are Sent Successfully")
+```
 
 ## TOOL
 
