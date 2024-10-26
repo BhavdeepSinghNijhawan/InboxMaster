@@ -2,8 +2,6 @@
 
 ![image](https://github.com/BhavdeepSinghNijhawan/Email-Marketing-Bot/assets/143419096/8109b397-e5ed-4d81-9a08-89208fa3be61)
 
-- The Python script automates the process of sending marketing emails to a list of recipients. It utilizes the **`smtplib library`** for sending emails via an **SMTP server** and the **`email.mime module`** for constructing email messages.
-
 ## FEATURES
 
 - **Email List:** The script supports **reading recipient email addresses from a list**. Currently, the email addresses are stored directly within the script for simplicity.
